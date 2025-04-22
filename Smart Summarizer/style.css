@@ -1,0 +1,193 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+  }
+  
+  .auth-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 0.6s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .auth-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .auth-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .auth-box button {
+    width: 100%;
+    margin: 20px 0 10px;
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  
+  .logout-btn {
+    width: auto;
+    padding: 8px 16px;
+    background: #dc3545;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  .upload-label {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .upload-label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  .upload-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .summary-box {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    min-height: 100px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .history-section {
+    margin-top: 40px;
+  }
+  
+  #summary-history {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .history-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    animation: fadeIn 0.5s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .history-item:hover {
+    transform: translateX(5px);
+    border-color: #007bff;
+  }
+  
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .summary-box {
+    transition: all 0.3s ease;
+  }
+  
+  .summary-box:not(:empty) {
+    animation: fadeIn 0.5s ease-out;
+  }
+  

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Smart Summarizer</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+  <div class="auth-container" id="auth-section">
+    <div class="auth-box" id="login-box">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email">
+      <input type="password" id="login-password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="toggleAuth()">Sign up</a></p>
+    </div>
+    <div class="auth-box" id="signup-box" style="display: none;">
+      <h2>Sign Up</h2>
+      <input type="text" id="signup-name" placeholder="Full Name">
+      <input type="email" id="signup-email" placeholder="Email">
+      <input type="password" id="signup-password" placeholder="Password">
+      <button onclick="signup()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="toggleAuth()">Login</a></p>
+    </div>
+  </div>
+  
+  <div class="container" id="app-container" style="display: none;">
+    <nav class="top-nav">
+      <span id="user-name"></span>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </nav>
+    <h1>Smart Summarizer</h1>
+    <div class="upload-section">
+      <input type="file" id="pdf-upload" accept=".pdf" onchange="handleFileUpload(event)">
+      <label for="pdf-upload" class="upload-label">Upload PDF</label>
+    </div>
+    <textarea id="input-text" placeholder="Paste your text here... or upload a PDF file"></textarea>
+    <button onclick="summarizeText()">Summarize</button>
+    <div id="summary" class="summary-box"></div>
+    <div class="history-section">
+      <h3>Previous Summaries</h3>
+      <div id="summary-history"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
